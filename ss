@@ -205,20 +205,20 @@ prettify () {
         \
         --escapes \
         --filter="${filter}" \
-	--color=${USE_COLOR:-${DEFAULT_USE_COLOR}}		\
-	--fancy-header="${HEADER:-${DEFAULT_HEADER}}"		\
-	--font="${FONT:-${DEFAULT_FONT}}"			\
-	--language="${OUTPUT_FORMAT:-${DEFAULT_OUTPUT_FORMAT}}"	\
-  ${LINE_NUMBERS:+--line-numbers} \
-	--margins=${left}:${right}:${top}:${bottom}		\
-	--mark-wrapped-lines=arrow				\
-	--media="${PAPERSIZE:-${DEFAULT_PAPERSIZE}}"						\
-	--portrait						\
-	--style="${COLORSCHEME:-${DEFAULT_COLORSCHEME}}"	\
-  --tabsize="${TABSIZE:-${DEFAULT_TABSIZE}}" \
-	--word-wrap						\
-    ${DEBUG:+--verbose} \
-	"${@}"
+	      --color=${USE_COLOR:-${DEFAULT_USE_COLOR}}		\
+	      --fancy-header="${HEADER:-${DEFAULT_HEADER}}"		\
+	      --font="${FONT:-${DEFAULT_FONT}}"			\
+	      --language="${OUTPUT_FORMAT:-${DEFAULT_OUTPUT_FORMAT}}"	\
+        ${LINE_NUMBERS:+--line-numbers} \
+	      --margins=${left}:${right}:${top}:${bottom}		\
+	      --mark-wrapped-lines=arrow				\
+	      --media="${PAPERSIZE:-${DEFAULT_PAPERSIZE}}"						\
+	      --portrait						\
+	      --style="${COLORSCHEME:-${DEFAULT_COLORSCHEME}}"	\
+        --tabsize="${TABSIZE:-${DEFAULT_TABSIZE}}" \
+	      --word-wrap						\
+        ${DEBUG:+--verbose} \
+	      "${@}"
 }
 
 
