@@ -22,6 +22,7 @@ DEFAULT_COLORSCHEME="tlilley"
 MERGED_OUTPUT_FILENAME="merged.pdf"
 
 DEFAULT_SYNSCRIPT_BIN="${HOME}/projects/agoraplex/synscript/target/release/synscript"
+DEFAULT_SYNSCRIPT_SYNTAX_DIR="${HOME}/.config/synscript/syntaxes"
 DEFAULT_SYNSCRIPT_THEME="${HOME}/.config/synscript/themes/base16-tripplilley.tmTheme"
 
 # @@ HACK: suppress line numbers? (default is to use line numbers)
@@ -196,7 +197,7 @@ EOF_AWK_LIST_LANGS
 
 prettify () {
     local src_lang="${1}" ; shift
-    local filter="${SYNSCRIPT_BIN:-${DEFAULT_SYNSCRIPT_BIN}} -t ${SYNSCRIPT_THEME:-${DEFAULT_SYNSCRIPT_THEME}} %s"
+    local filter="${SYNSCRIPT_BIN:-${DEFAULT_SYNSCRIPT_BIN}} -t ${SYNSCRIPT_THEME:-${DEFAULT_SYNSCRIPT_THEME}} -s ${SYNSCRIPT_SYNTAX_DIR:-${DEFAULT_SYNSCRIPT_SYNTAX_DIR}} %s"
 
     # ${src_lang:+--highlight="${src_lang}"}			\
 
