@@ -15,6 +15,7 @@ DEFAULT_HEADER="tlilley"
 DEFAULT_FONT="Courier6"
 DEFAULT_OUTPUT_FORMAT="PostScript"
 DEFAULT_PAPERSIZE="A4"
+DEFAULT_ORIENTATION="portrait"
 DEFAULT_TABSIZE=4
 DEFAULT_USE_COLOR=1
 DEFAULT_COLORSCHEME="tlilley"
@@ -214,7 +215,7 @@ prettify () {
 	      --margins=${left}:${right}:${top}:${bottom}		\
 	      --mark-wrapped-lines=arrow				\
 	      --media="${PAPERSIZE:-${DEFAULT_PAPERSIZE}}"						\
-	      --portrait						\
+	      --${ORIENTATION:-${DEFAULT_ORIENTATION}}						\
 	      --style="${COLORSCHEME:-${DEFAULT_COLORSCHEME}}"	\
         --tabsize="${TABSIZE:-${DEFAULT_TABSIZE}}" \
 	      --word-wrap						\
