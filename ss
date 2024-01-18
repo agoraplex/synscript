@@ -22,7 +22,7 @@ DEFAULT_COLORSCHEME="tlilley"
 
 MERGED_OUTPUT_FILENAME="merged.pdf"
 
-DEFAULT_SYNSCRIPT_BIN="${HOME}/projects/agoraplex/synscript/target/release/synscript"
+DEFAULT_SYNSCRIPT_BIN="${HOME}/.cargo/bin/synscript"
 DEFAULT_SYNSCRIPT_SYNTAX_DIR="${HOME}/.config/synscript/syntaxes"
 DEFAULT_SYNSCRIPT_THEME="${HOME}/.config/synscript/themes/base16-tripplilley.tmTheme"
 
