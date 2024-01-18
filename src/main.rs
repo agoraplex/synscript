@@ -126,7 +126,7 @@ fn main() {
             let mut line = String::new();
             while h.reader.read_line(&mut line).unwrap() > 0 {
                 {
-                    let regions: Vec<(Style, &str)> = h.highlight_lines.highlight(&line, &ss);
+                    let regions: Vec<(Style, &str)> = h.highlight_lines.highlight_line(&line, &ss).unwrap();
                     print!("{}", as_enscript_escaped(&regions[..], false));
                 }
                 line.clear();
